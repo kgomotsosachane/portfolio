@@ -167,7 +167,6 @@ nav ul {
     height: 2rem;
 }
 
-
 /* contact section */
 
 .field-row {
@@ -244,18 +243,6 @@ nav ul {
     padding: 12px 28px;
 }
 
-/* Responsive: stack name/email on small screens */
-@media (max-width: 600px) {
-    .field-row {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
-
-/* ==========================================================================
-   Resume — LAYOUT (append to layout.css)
-   ========================================================================== */
 
 /* Main content area next to sidebar */
 .overview {
