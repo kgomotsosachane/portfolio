@@ -1,0 +1,73 @@
+:root {
+
+    /* Brand / accent */
+    --color-accent-light: #278cd9;
+    --color-accent : #2572d0;
+    --color-accent-contrast: #ffffff;
+
+    /* Dark theme (default) */ 
+    --color-bg: #14151a;
+    --color-bg-panel: #1c1e24;
+    --color-text: #f7f2f2;
+    --color-text-muted: #b5b8c2;
+    --color-border: #2e313a;
+    --color-card-bg: #1c1e24;
+
+    /* Spacing (optional, add more as needed) */
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 32px;
+
+    /* Radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1.1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.65rem;
+    --font-size-xxl: 2rem;
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 600;
+
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.6;
+    --line-height-loose: 1.75;
+
+    /* Padding */
+    --padding-xs: 0.25rem;  /* 4px */
+    --padding-sm: 0.5rem;   /* 8px */
+    --padding-md: 1.2rem;   /* 16px */
+    --padding-lg: 2rem;     /* 32px */
+    --padding-xl: 3rem;     /* 48px */
+
+    /* Margin */
+    --margin-xs: 0.25rem;  /* 4px */
+    --margin-sm: 0.5rem;   /* 8px */
+    --margin-md: 1rem;     /* 16px */
+    --margin-lg: 2rem;     /* 32px */
+    --margin-xl: 3rem;     /* 48px */
+
+    /* Status colors */
+    --color-success: #2fb670;
+    --color-warning: #e0a63a;
+    --color-error: #e05a5a;
+    --color-info: #3a7bc0;
+
+    --shadow-sm: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+    --shadow-lg: 0 0.625rem 1.5rem rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode {
+    --color-bg: #ffffff;
+    --color-bg-panel: #f7f8fa;
+    --color-text: #1a1a1a;
+    --color-text-muted: #555555;
+    --color-border: #e5e7eb;
+    --color-card-bg: #ffffff;
+}

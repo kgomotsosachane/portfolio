@@ -1,0 +1,287 @@
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: var(--padding-lg);
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+main {
+    width: 75%;
+    float: right;
+    padding: var(--padding-lg);
+    border-radius: var(--padding-lg);
+    min-width: 0;  
+}
+
+aside {
+    width: 30%;
+    height: 950px;
+    float: left;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    border-radius: 1rem;
+    min-width: 0;
+}
+
+.profile img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 50%;
+    height: 12rem;
+    width: 12rem;
+}
+
+.contact-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: var(--margin-sm);
+}
+
+.social-links {
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.nav-hero {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.2rem;
+    transition: left 0.3s ease, width 0.3s ease;
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.2rem;
+}
+
+.core-skills {
+    display: flex;
+    gap: 8rem;
+}
+
+.core-skills img {
+    height: 8rem;
+    width: 36rem;
+    margin-top: 1rem;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem;
+}
+
+/* resume section */
+
+.resume-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.resume-link {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: var(--margin-sm);
+}
+
+.resume-nav {
+    flex: 0 0 280px;
+    padding: 32px 24px;
+    position: sticky;
+    top: 20px;
+}
+
+.resume-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.resume-nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.resume-nav ul li a p {
+    margin: 0;
+}
+
+.rusume-nav ul li i {
+    margin-left: 1rem;
+}
+
+.explore-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    height: 10rem;
+}
+
+.mindset-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
+    grid-gap: 1rem;
+}
+
+.mindset-cards .m-card h2{
+    font-size: 3rem;
+    height: 2rem;
+}
+
+
+/* contact section */
+
+.field-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.field-row .field {
+    margin-bottom: 0;
+}
+
+.get-in-touch {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.get-in-touch h4 {
+    margin-bottom: 8px;
+}
+
+.get-in-touch h2 {
+    margin-bottom: 16px;
+}
+
+.get-in-touch>p {
+    margin-bottom: 32px;
+}
+
+/* Form container */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Row layout for name + email side by side */
+.field-row {
+    display: flex;
+    gap: 20px;
+}
+
+.field-row .field {
+    flex: 1;
+}
+
+/* Shared field layout (name, email, subject, message) */
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    margin-bottom: 6px;
+}
+
+.field input,
+.field textarea {
+    padding: 12px 14px;
+}
+
+.field textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.field .err {
+    margin-top: 4px;
+}
+
+/* Submit button positioning */
+.contact-form button[type="submit"] {
+    align-self: flex-start;
+    padding: 12px 28px;
+}
+
+/* Responsive: stack name/email on small screens */
+@media (max-width: 600px) {
+    .field-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+/* ==========================================================================
+   Resume — LAYOUT (append to layout.css)
+   ========================================================================== */
+
+/* Main content area next to sidebar */
+.overview {
+    flex: 1;
+    min-width: 0;
+}
+
+.overview .explore-cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.overview .card {
+    flex: 1;
+    padding: 24px;
+    text-decoration: none;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.card-header h3 {
+    margin: 0;
+}

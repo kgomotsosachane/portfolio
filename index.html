@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kgomotso-Sachane-Portfolio</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/theme-toggle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside>
+
+            <div class="profile">
+                <img src="assets/images/profile.jpg" alt="Profile Picture">
+            </div>
+
+            <h3 class="name">Kgomotso Sachane</h3>
+            <p class="role">Aspiring Data Engineer</p>
+
+            <span class="underline"></span>
+
+
+            <div class="social-links">
+                <a href="https://github.com/kgomotsosachane" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/kgomotso-sachane/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="https://www.instagram.com/kgomotso_sachane26/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+
+            <ul>
+
+                <li>
+                    <div class="contact-group">
+
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <a href="mailto:kgomotsosachane@gmail.com">
+                                <p>kgomotsosachane26@gmail.com</p>
+                            </a>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="contact-group">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <a href="tel:+27699237654">
+                                <p>+27 69 923 7654</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+
+                    <div class="contact-group">
+                        <div class="contact-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+
+                        <div class="contact-text">
+                            <h3>Birth Date</h3>
+                            <p>November 06, 2004</p>
+                        </div>
+                    </div>
+
+                </li>
+
+                <li>
+                    <div class="contact-group">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>Johannesburg, South Africa</p>
+                        </div>
+                    </div>
+
+                </li>
+
+            </ul>
+
+            <div class="resume-link">
+                <a href="documents/Resume.pdf" target="_blank">
+                    <i class="fas fa-download"></i>
+                    Download CV
+                </a>
+            </div>
+
+
+        </aside>
+
+        <main>
+
+            <section id="about" class="page active">
+
+                <div class="nav-hero">
+
+                    <h1 class="title">
+                        About Me
+                    </h1>
+
+                    <nav class="navbar">
+                        <ul class="nav-list">
+                            <li><a href="#about" data-target="about" class="active">About</a></li>
+                            <li><a href="#resume" data-target="resume">Resume</a></li>
+                            <li><a href="#projects" data-target="projects">Projects</a></li>
+                            <li><a href="#contact" data-target="contact">Contact</a></li>
+                        </ul>
+
+                        <button class="theme-toggle" type="button" aria-label="Toggle light mode" aria-pressed="false">
+                            <i class="fa-solid fa-sun"></i>
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </nav>
+
+
+                    <span class="nav-underline"></span>
+
+                </div>
+
+
+                <p class="about-text">
+                    I'm a final-year Information Technology student with a growing interest in Data Engineering and the
+                    fundamentals of building reliable data solutions. I'm developing my technical foundation in SQL,
+                    Python, and dbt, and I'm currently exploring tools like PySpark, Databricks, and AWS through
+                    hands-on personal projects and coursework.
+
+                    I enjoy working through the basics of the data lifecycle, writing queries, cleaning and
+                    transforming datasets, and learning how data models and simple pipelines come together. I'm
+                    especially interested in understanding how raw data becomes something reliable and useful for
+                    decision-making.
+
+                    My goal is to grow into a Data Engineer by building a strong foundation now and continuing to learn
+                    from experienced professionals. I'm currently seeking internship and graduate opportunities where I
+                    can apply what I've learned, gain real-world experience, and keep developing my skills in data
+                    engineering.
+
+                </p>
+
+                <h2 class="skills-title; font-size: 2rem;">Core Technical Skills</h2>
+
+                <div class="skills-container">
+
+                    <div class="skill">
+
+                        <div>
+
+                            <i class="fa-solid fa-database" style="color: var(--color-accent-light);"></i>
+
+                            <span>
+                                <h3>Databases & SQL</h3>
+                                <p>
+                                    Experienced in designing and querying relational databases (PostgreSQL, MySQL), with
+                                    strong command of SQL, from complex joins and subqueries to window functions and
+                                    CTEs, for extracting insights and building reporting layers.
+                                </p>
+                            </span>
+                        </div>
+
+
+                    </div>
+
+                    <div class="skill">
+                        <div>
+
+                            <i class="fa-solid fa-gears" style="color: var(--color-accent-light);"></i>
+
+                            <span>
+                                <h3>dbt (Data Build Tool)</h3>
+                                <p>
+                                    Skilled in transforming raw data into analytics-ready models using dbt, including
+                                    staging/intermediate/mart layering, incremental models, source freshness checks, and
+                                    automated testing/documentation to ensure data reliability.
+                                </p>
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="skill">
+
+                        <div>
+
+                            <i class="fa-brands fa-python" style="color: var(--color-accent-light);"></i>
+                            <span>
+                                <h3>Python</h3>
+                                <p>
+                                    Skilled in Python for designing and automating data pipelines, handling extraction,
+                                    transformation, and loading (ETL) across multiple data sources, with experience in
+                                    scripting, scheduling, and error handling for reliable data workflows.
+                                </p>
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="skill">
+
+                        <div>
+
+                            <i class="fa-brands fa-github" style="color: var(--color-accent-light);"></i>
+                            <span>
+
+                                <h3>Git & GitHub (Version Control)</h3>
+                                <p>
+                                    Proficient in Git and GitHub for version control, managing branching workflows,
+                                    resolving merge conflicts, and collaborating on codebases through pull requests and
+                                    code reviews.
+                                </p>
+
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+            <section id="resume" class="page">
+
+                <div class="nav-hero">
+
+                    <h1 class="title">
+                        Resume
+                    </h1>
+
+                    <nav class="navbar">
+                        <ul class="nav-list">
+                            <li><a href="#about" data-target="about" class="active">About</a></li>
+                            <li><a href="#resume" data-target="resume">Resume</a></li>
+                            <li><a href="#projects" data-target="projects">Projects</a></li>
+                            <li><a href="#contact" data-target="contact">Contact</a></li>
+                        </ul>
+
+                        <button class="theme-toggle" type="button" aria-label="Toggle light mode" aria-pressed="false">
+                            <i class="fa-solid fa-sun"></i>
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </nav>
+                </div>
+
+                <div class="resume-container">
+                    <aside class="resume-nav">
+                        <h4>ABOUT</h4>
+                        <h2>Why Hire Me?</h2>
+                        <p>
+                            I deliver clean, efficient data pipelines. Fast learner. Problem-solver who prioritizes
+                            collaboration and results.
+                        </p>
+
+                        <ul class="resume-menu">
+                            <li>
+                                <a href="#overview" data-target="resume" class="active">
+                                    <i class="fa-solid fa-house"></i>
+                                    <p>Overview</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#experience" data-target="experience">
+                                    <i class="fa-regular fa-user"></i>
+                                    <p>Experience</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#education" data-target="education">
+                                    <i class="fa-solid fa-book"></i>
+                                    <p>Education</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#technologies" data-target="technologies">
+                                    <i class="fa-solid fa-code"></i>
+                                    <p>Technologies</p>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <div class="resume-section" id="resume" class="overview">
+                        <h1><span>Resume</span></h1>
+                        <p>
+                            <span style="font-size: 1.2rem;">
+                                Aspiring Data Engineer with hands-on coursework and project experience in building
+                                scalable data pipelines.
+                            </span>
+                        </p>
+
+                        <span>
+                            <a href="documents/Resume.pdf" target="_blank">
+                                <i class="fas fa-download"></i>
+                                Download Resume
+                            </a>
+                        </span>
+
+                        <h4 style="color: rgb(36, 119, 178); font-weight: 600; font-size: 1rem;">NAVIGATE</h4>
+                        <h2>Explore Sections</h2>
+
+                        <div class="explore-cards">
+                            <a href="#experience" data-target="experience" class="card">
+                                <div class="card-header">
+                                    <i class="fa-regular fa-user"></i>
+                                    <h3>Experience</h3>
+                                </div>
+                                <p>
+                                    Hands-on experience with SQL and modern data platforms, including querying, data
+                                    analysis, and supporting data workflows
+                                </p>
+                            </a>
+
+                            <a href="#education" data-target="education" class="card">
+                                <div class="card-header">
+                                    <i class="fa-solid fa-book"></i>
+                                    <h3>Education</h3>
+                                </div>
+                                <p>Academic foundation in Information Technology and continuous learning.</p>
+                            </a>
+
+                            <a href="#technologies" data-target="technologies" class="card">
+                                <div class="card-header">
+                                    <i class="fa-solid fa-code"></i>
+                                    <h3>Technologies</h3>
+                                </div>
+                                <p>5+ Technologies mastered</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="resume-section" id="experience" class="expericene">
+                        <h1>Experience</h1>
+
+                    </div>
+
+                    <div class="resume-section" id="education" class="education">
+                        <h1>Educational Background</h1>
+                        <p>
+                            <span style="font-size: 1.1rem;">
+                                A dedicated data engineer with a strong educational foundation in <span
+                                    style="color: rgb(33, 91, 184);">Information Tehnology</span>,
+                                continuously expanding my knowledge through hands-on experience and lifelong learning.
+                            </span>
+                        </p>
+
+                        <div class="edu-card-group">
+                            <div class="edu-card">
+                                <h3>2024 - 2026</h3>
+                                <h2>Dip Information Technology</h2>
+                                <p>Vaal University of Tehnology</p>
+                                <p>Vanderbijlpark, South Africa</p>
+                            </div>
+
+                            <div class="edu-card">
+                                <h3>2018 - 2023</h3>
+                                <h2>National Senior Certificate</h2>
+                                <p>Zitikeni Secondary School</p>
+                                <p>Gauteng, South Africa</p>
+                            </div>
+
+                            <div class="edu-card">
+                                <h3>2011 - 2017</h3>
+                                <h2>Primary Education</h2>
+                                <p>Moriting Primary Shool</p>
+                                <p>Gauteng, South Africa</p>
+                            </div>
+                        </div>
+
+                        <p style="font-size: 1.25rem; font-weight: 600;">Mindset</p>
+                        <h2 style="font-size: 1.85rem;">Learning Philosophy</h2>
+
+                        <div class="mindset-cards">
+
+                            <div class="m-card">
+                                <h2>01</h2>
+                                <h3>Continuous Learning</h3>
+
+                                <p>
+                                    Stay current with evolving technologies through courses, documentation, and hands-on
+                                    experimentation.
+                                </p>
+                            </div>
+
+                            <div class="m-card">
+                                <h2>02</h2>
+                                <h3>Practical Application</h3>
+
+                                <p>
+                                    Bridge academic theory with real-world problem-solving and industry best practices.
+                                </p>
+                            </div>
+
+                            <div class="m-card">
+                                <h2>03</h2>
+                                <h3>Knowledge Sharing</h3>
+
+                                <p>
+                                    Mentor upcoming data analysts/engineers and contribute to team growth through
+                                    documentation and
+                                    training.
+                                </p>
+                            </div>
+
+                            <div class="m-card">
+                                <h2>04</h2>
+                                <h3>Innovation Focus</h3>
+
+                                <p>
+                                    Apply solid foundations to explore emerging technologies and create creative
+                                    solutions.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="resume-section" class="tehnologies" id="technologies">
+                        <h1>
+                            Technical Skills & <span
+                                style="color: rgb(73, 126, 212); background: linear-gradient(to right, rgb(33, 91, 184), #00c6ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Technologies</span>
+                        </h1>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="projects" class="page">
+                <div class="nav-hero">
+
+                    <h1 class="title">
+                        Projects
+                    </h1>
+
+                    <nav class="navbar">
+                        <ul class="nav-list">
+                            <li><a href="#about" data-target="about" class="active">About</a></li>
+                            <li><a href="#resume" data-target="resume">Resume</a></li>
+                            <li><a href="#projects" data-target="projects">Projects</a></li>
+                            <li><a href="#contact" data-target="contact">Contact</a></li>
+                        </ul>
+
+                        <button class="theme-toggle" type="button" aria-label="Toggle light mode" aria-pressed="false">
+                            <i class="fa-solid fa-sun"></i>
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </nav>
+                </div>
+            </section>
+
+
+            <section id="contact" class="page">
+
+                <div class="nav-hero">
+
+                    <h1 class="title">
+                        Contact Me
+                    </h1>
+
+                    <nav class="navbar">
+                        <ul class="nav-list">
+                            <li><a href="#about" data-target="about" class="active">About</a></li>
+                            <li><a href="#resume" data-target="resume">Resume</a></li>
+                            <li><a href="#projects" data-target="projects">Projects</a></li>
+                            <li><a href="#contact" data-target="contact">Contact</a></li>
+                        </ul>
+
+                        <button class="theme-toggle" type="button" aria-label="Toggle light mode" aria-pressed="false">
+                            <i class="fa-solid fa-sun"></i>
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </nav>
+                </div>
+
+                <div class="get-in-touch">
+
+                    <h2>Get in Touch</h2>
+                    <p>
+                        I'm always open to discussing new opportunities, interesting projects, or just having a
+                        conversation
+                        about technology and software development.
+                    </p>
+
+                    <div class="contact-form">
+                        <form action="/submit-form" method="POST" novalidate>
+
+                            <div class="field-row">
+                                <div class="field" data-field="name">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name"
+                                        required>
+                                    <p class="err">Name is required.</p>
+                                </div>
+
+                                <div class="field" data-field="email">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="email@example.com"
+                                        autocomplete="email" required>
+                                    <p class="err">Email is required.</p>
+                                </div>
+                            </div>
+
+                            <div class="field" data-field="subject">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Project Discussion"
+                                    autocomplete="off" required>
+                                <p class="err">Subject is required.</p>
+                            </div>
+
+                            <div class="field" data-field="message">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Message" rows="6"
+                                    required></textarea>
+                                <p class="err">Message is required.</p>
+                            </div>
+
+                            <button type="submit">
+                                Send Message
+                                <i class="fa-regular fa-paper-plane" style="color: rgb(213, 217, 219);"></i>
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+    <script src="js/resume-links.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
