@@ -1,0 +1,486 @@
+/* ==========================================================================
+   RESPONSIVE STYLES  (load LAST, after theme-toggle.css)
+   Desktop design is untouched. Mobile keeps your original look and only
+   adjusts layout: stacked sidebar, 1-column cards, bottom tab bar with icons.
+   ========================================================================== */
+
+/* ---------- Safety nets ---------- */
+img { max-width: 100%; }
+.contact-text p,
+.contact-text a { overflow-wrap: anywhere; }
+
+/* Nav icons are mobile-only; clicks always land on the <a> (keeps nav.js working) */
+.nav-icon { display: none; }
+.nav-icon,
+.nav-label { pointer-events: none; }
+
+/* ---------- Desktop ---------- */
+.container > aside {
+    flex: 0 0 300px;
+    width: 300px;
+    height: fit-content;
+    top: 1rem;
+}
+main {
+    flex: 1;
+    width: auto;
+    float: none;
+}
+.explore-cards { height: auto; }
+.explore-cards a {
+    width: auto;
+    height: auto;
+    min-height: 12rem;
+}
+
+/* ---------- ≤1200px ---------- */
+@media (max-width: 1200px) {
+    .container { padding: 1.25rem; gap: 1.25rem; }
+    .container > aside {
+        flex-basis: 270px;
+        width: 270px;
+        padding: 1.5rem 1.25rem;
+    }
+    main { padding: 1rem; }
+    .contact-group { gap: 0.75rem; }
+    .profile img { width: 10rem; height: 10rem; }
+}
+
+/* ---------- ≤1024px ---------- */
+@media (max-width: 1024px) {
+    .resume-container { flex-direction: column; gap: 1.5rem; }
+    .resume-nav {
+        flex: none;
+        width: 100%;
+        position: static;
+        padding: 1.25rem;
+        box-sizing: border-box;
+    }
+    .resume-nav .resume-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+    .resume-nav .resume-menu li { flex: 1 1 140px; margin-bottom: 0; }
+    .resume-section { width: 100%; }
+}
+
+/* ---------- ≤900px: sidebar stacks on top ---------- */
+@media (max-width: 900px) {
+    .container { flex-direction: column; align-items: stretch; }
+    .container > aside,
+    main { width: 100%; flex: none; box-sizing: border-box; }
+    .container > aside {
+        position: static;
+        height: auto;
+        padding: 1.5rem;
+    }
+    .container > aside > ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem 1.5rem;
+        padding: 0;
+    }
+    .contact-group { margin-bottom: 0.5rem; }
+    .resume-link { margin-bottom: 0; }
+    .resume-link a { width: 100%; max-width: 20rem; box-sizing: border-box; }
+}
+
+/* ---------- ≤768px: phones ---------- */
+@media (max-width: 768px) {
+    body { padding-bottom: 5.5rem; }          /* room for the tab bar */
+
+    .container { padding: 0.75rem; gap: 0.75rem; }
+    main { padding: 0.75rem 0.25rem; }
+
+    /* ===== Profile card: compact ===== */
+    .container > aside {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas:
+            "name    name photo"
+            "role    role photo"
+            "contact contact contact"
+            "social  cv      cv";
+        align-items: center;
+        column-gap: 0.75rem;
+        padding: 1rem;
+        border: 1px solid var(--color-border);
+        border-radius: 1.25rem;
+    }
+
+    .profile { grid-area: photo; }
+    .profile img {
+        width: 5.25rem;
+        height: 5.25rem;
+        margin: 0;
+        border-radius: 1rem;
+        object-fit: cover;
+    }
+
+    .name {
+        grid-area: name;
+        align-self: end;
+        text-align: left;
+        font-size: 1.3rem;
+        margin: 0 0 0.4rem;
+    }
+
+    .role {
+        grid-area: role;
+        align-self: start;
+        justify-self: start;
+        margin: 0;
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+        text-align: left;
+        color: var(--color-text-muted);
+        background-color: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: 999px;
+    }
+
+    .underline { display: none; }
+
+    /* Contact: email on its own row, phone | location below (birth date hidden on phones) */
+    .container > aside > ul {
+        grid-area: contact;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.7rem 0.5rem;
+        margin: 0.9rem 0 0;
+        padding: 0.8rem 0 0;
+        border-top: 1px solid var(--color-border);
+    }
+    .container > aside > ul > li:nth-child(1) { grid-column: 1 / -1; }
+    .container > aside > ul > li:nth-child(3) { display: none; }   /* birth date */
+
+    .contact-group { gap: 0.6rem; margin-bottom: 0; align-items: center; }
+    .contact-icon i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        padding: 0;
+        font-size: 0.85rem;
+        border-radius: 0.65rem;
+    }
+    .contact-text { min-width: 0; }
+    .contact-text h3 {
+        margin: 0 0 0.1rem;
+        font-size: 0.6rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+    .contact-text p {
+        margin: 0;
+        font-size: 0.8rem;
+        line-height: 1.25;
+    }
+
+    /* Socials (left) + Download CV (right) share one row */
+    .social-links {
+        grid-area: social;
+        display: flex;
+        gap: 0.1rem;
+        margin-top: 0.8rem;
+    }
+    .social-links a { margin: 0; }
+    .social-links a i {
+        padding: 0.4rem;
+        font-size: 1.2rem;
+        color: var(--color-text-muted);
+        background-color: transparent;
+    }
+
+    .resume-link { grid-area: cv; margin: 0.8rem 0 0; }
+    .resume-link a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        max-width: none;
+        margin-top: 0;
+        padding: 0.6rem;
+        box-sizing: border-box;
+        font-size: 0.9rem;
+        color: var(--color-accent);
+        background-color: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: 0.8rem;
+    }
+
+    /* ===== Page header ===== */
+    .nav-hero { justify-content: flex-start; }
+    .title { font-size: 1.5rem; }
+
+    /* ===== Bottom tab bar (icons + theme toggle stay in the bar) ===== */
+    .navbar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        gap: 0.5rem;
+        padding: 0.5rem 0.75rem calc(0.5rem + env(safe-area-inset-bottom));
+        background-color: var(--color-bg-panel);
+        border-top: 1px solid var(--color-border);
+        box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.25);
+    }
+    .nav-list {
+        flex: 1;
+        justify-content: space-around;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .nav-list li { flex: 1; display: flex; justify-content: center; }
+    .nav-list a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+        width: 100%;
+        padding: 0.25rem 0;
+    }
+    .nav-icon { display: block; font-size: 1.25rem; }
+    .nav-label { font-size: 0.7rem; line-height: 1; }
+
+    /* ===== Content grids → 1 column ===== */
+    .skills-container,
+    .explore-cards,
+    .mindset-cards { grid-template-columns: 1fr; }
+    .explore-cards a { min-height: auto; }
+    .card::after { opacity: 1; transform: none; }   /* no hover on touch */
+
+    .about-text { font-size: 1rem; }
+    .skill { padding: 1rem; }
+    .edu-card h2 { font-size: 1.25rem; }
+    .mindset-cards .m-card h2 { font-size: 2.2rem; height: auto; }
+    .resume-nav .resume-menu li { flex: 1 1 calc(50% - 0.75rem); }
+
+    .get-in-touch { padding: 2rem 0.5rem; }
+    .get-in-touch h2 { font-size: 1.5rem; }
+}
+
+/* ---------- ≤480px: small phones ---------- */
+@media (max-width: 480px) {
+    .container { padding: 0.5rem; }
+    .container > aside { padding: 0.9rem; }
+    .profile img { width: 4.75rem; height: 4.75rem; }
+    .name { font-size: 1.2rem; }
+    .contact-text p { font-size: 0.76rem; }
+    .nav-label { font-size: 0.65rem; }
+    .skill div { flex-direction: column; gap: 0.5rem; }
+    .resume-nav .resume-menu li { flex: 1 1 100%; }
+    .field input,
+    .field textarea { font-size: 1rem; }
+}
+
+/* ==========================================================================
+   MOBILE TYPOGRAPHY
+   Scales your font-size variables down for phones, then fine-tunes headings.
+   Keeps body text readable (>= 15px) and form inputs at 16px (no iOS zoom).
+   ========================================================================== */
+@media (max-width: 768px) {
+    :root {
+        --font-size-sm: 0.8rem;
+        --font-size-md: 0.95rem;
+        --font-size-lg: 1.05rem;
+        --font-size-xl: 1.35rem;
+        --font-size-xxl: 1.6rem;
+    }
+
+    /* Page title + intro */
+    .title { font-size: 1.4rem; }
+    .about-text { font-size: 0.95rem; line-height: 1.7; }
+
+    /* Section headings */
+    .skills-title { font-size: 1.25rem; margin: 1.5rem 0 0.75rem; }
+    .resume-section h1 { font-size: 1.5rem; }
+    .resume-section h2 { font-size: 1.3rem; }
+    .resume-section h2[style*="font-size"] { font-size: 1.35rem !important; }
+    .resume-section p[style*="font-size"] { font-size: 1.05rem !important; }
+    .resume-section span[style*="font-size"] { font-size: 0.95rem !important; }
+    .resume-section p { font-size: 0.95rem; line-height: 1.6; }
+
+    /* Resume sub-menu */
+    .resume-nav h2 { font-size: 1.25rem; }
+    .resume-nav h4 { font-size: 0.8rem; }
+    .resume-nav > p { font-size: 0.9rem; }
+    .resume-nav ul li a p { font-size: 0.95rem; }
+
+    /* Skill cards */
+    .skill h3 { font-size: 1.05rem; margin: 0 0 0.4rem; }
+    .skill p { font-size: 0.9rem; line-height: 1.6; margin: 0; }
+
+    /* Explore / education / mindset cards */
+    .card p,
+    .edu-card p,
+    .m-card p { font-size: 0.9rem; line-height: 1.55; }
+    .edu-card h3 { font-size: 0.8rem; }
+    .edu-card h2 { font-size: 1.2rem; }
+    .m-card h3 { font-size: 1.05rem; }
+
+    /* Contact form */
+    .get-in-touch h2 { font-size: 1.5rem; }
+    .get-in-touch > p { font-size: 0.95rem; }
+    .field label { font-size: 0.9rem; }
+    .field input,
+    .field textarea { font-size: 1rem; }
+    .field .err { font-size: 0.8rem; }
+    .contact-form button[type="submit"] { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+    .title { font-size: 1.3rem; }
+    .about-text { font-size: 0.92rem; }
+    .resume-section h1 { font-size: 1.35rem; }
+    .resume-section h2 { font-size: 1.2rem; }
+    .resume-section h2[style*="font-size"] { font-size: 1.25rem !important; }
+    .get-in-touch h2 { font-size: 1.35rem; }
+    .skill p,
+    .card p,
+    .edu-card p,
+    .m-card p { font-size: 0.88rem; }
+}
+
+/* ==========================================================================
+   MOBILE COMPONENT SIZES
+   Buttons, tabs and form fields sized for thumbs (about 44px tap targets).
+   ========================================================================== */
+@media (max-width: 768px) {
+    a, button { -webkit-tap-highlight-color: transparent; }
+
+    /* Bottom tab bar + theme toggle */
+    .nav-list a { min-height: 2.75rem; justify-content: center; }
+    .theme-toggle { width: 2.75rem; height: 2.75rem; padding: 0; }
+    .theme-toggle i { font-size: 1.1rem; }
+
+    /* Hero card */
+    .social-links a i { padding: 0.6rem; font-size: 1.2rem; }
+    .resume-link a { min-height: 2.75rem; padding: 0.6rem 0.75rem; font-size: 0.9rem; }
+
+    /* "Download Resume" button in the Resume section */
+    .resume-section > span > a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        min-height: 2.75rem;
+        padding: 0.65rem 1.25rem;
+        margin: 0.75rem 0;
+        font-size: 0.95rem;
+        box-sizing: border-box;
+    }
+
+    /* Resume sub-menu buttons */
+    .resume-nav .resume-menu li a {
+        min-height: 2.75rem;
+        padding: 0.6rem 0.9rem;
+    }
+    .resume-nav { padding: 1rem; }
+
+    /* Cards */
+    .explore-cards a { padding: 1.1rem; }
+    .edu-card { padding: 1rem; }
+    .m-card { padding: 1rem; }
+
+    /* Contact form */
+    .field input,
+    .field textarea { padding: 0.75rem 0.9rem; }
+    .field input { min-height: 2.9rem; }
+    .field textarea { min-height: 8rem; }
+    .contact-form button[type="submit"] {
+        min-height: 3rem;
+        padding: 0.8rem 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Full-width Download Resume button on small phones */
+    .resume-section > span > a { width: 100%; }
+}
+
+/* ==========================================================================
+   EDUCATION CARDS FIX
+   .edu-card was width:100% + padding + 8px border (content-box), so it grew
+   wider than its column and ran into the neighbouring elements on phones.
+   ========================================================================== */
+.resume-container > * { min-width: 0; }
+
+.edu-card-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.edu-card,
+.m-card {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-bottom: 0;                 /* spacing now comes from the group's gap */
+    overflow-wrap: anywhere;
+}
+
+.edu-card h2,
+.edu-card h3,
+.edu-card p { margin-top: 0; }
+
+.edu-card h2 { margin-bottom: 0.5rem; line-height: 1.25; }
+.edu-card h3 { margin-bottom: 0.4rem; }
+.edu-card p { margin-bottom: 0.25rem; }
+
+@media (max-width: 768px) {
+    .edu-card { border-left-width: 6px; }
+    .edu-card:hover { transform: none; }
+}
+
+/* ==========================================================================
+   LIGHT MODE FIX: resume sub-menu text
+   The menu links were hard-set to white (--color-accent-contrast), which is
+   invisible on a light background. Now they follow the theme text colour and
+   switch to white only on the blue active/hover state.
+   ========================================================================== */
+.resume-nav ul li a { color: var(--color-text); }
+.resume-nav ul li a p { color: inherit; }
+
+.resume-nav ul li a.active,
+.resume-nav ul li a:hover { color: var(--color-accent-contrast); }
+
+/* ==========================================================================
+   COMPACT CONTACT FORM (phones)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .contact-form form { gap: 0.9rem; }
+    .field-row { gap: 0.9rem; }
+
+    .field label {
+        margin-bottom: 0.3rem;
+        font-size: 0.85rem;
+    }
+
+    .field input,
+    .field textarea {
+        padding: 0.55rem 0.8rem;
+        font-size: 1rem;            /* keep 16px so iPhones don't zoom on focus */
+        line-height: 1.3;
+        border-radius: var(--radius-sm);
+    }
+    .field input { min-height: 2.6rem; height: 2.6rem; }
+    .field textarea { min-height: 6.5rem; height: 6.5rem; }
+
+    .contact-form button[type="submit"] {
+        min-height: 2.75rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Small gap above a resume section when it is scrolled into view */
+.resume-section { scroll-margin-top: 1rem; }
